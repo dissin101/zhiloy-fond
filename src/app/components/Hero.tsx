@@ -23,14 +23,14 @@ const Hero = () => (
             width={2240}
             height={898}
             className={
-                'rounded-[30px] object-cover aspect-3/4 lg:aspect-3/1 w-full'
+                'rounded-[30px] object-cover aspect-3/3 lg:aspect-3/1 w-full'
             }
         />
         <div className={'flex flex-col lg:flex-row justify-between gap-2.5'}>
             <div className={'flex flex-col gap-2.5 text-on-background'}>
                 <span className={'font-bold'}>Проект</span>
                 <h1
-                    style={{ fontWeight: 700 }}
+                    style={{ fontWeight: 500 }}
                     className={
                         'uppercase text-[64px]/12 font-[var(--font-cormorant-sc)]'
                     }
@@ -57,6 +57,7 @@ const Hero = () => (
                 </div>
             </div>
         </div>
+        <div className={'hidden lg:flex bg-primary w-full h-[1px]'} />
     </div>
 )
 

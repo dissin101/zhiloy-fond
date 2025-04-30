@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header
             className={
-                'flex justify-center md:justify-between items-center w-full pb-2.5 pt-[52px] md:pt-2.5'
+                'flex justify-center md:justify-between items-center w-full lg:pb-2.5 pt-[52px] md:pt-2.5'
             }
         >
             <div className={'hidden md:block'} />
