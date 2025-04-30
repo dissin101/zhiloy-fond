@@ -1,13 +1,19 @@
 import Header from '@/app/components/Header'
 import Hero from '@/app/components/Hero'
 import About from '@/app/components/About'
+import Infrastructure from '@/app/components/Infrastructure'
 
 const Index = () => {
     return (
-        <div className={'flex flex-col gap-5 lg:gap-[30px] px-4 md:px-[60px]'}>
+        <div
+            className={
+                'flex flex-col m-auto gap-5 lg:gap-[30px] px-4 md:px-[60px] max-w-[1320px]'
+            }
+        >
             <Header />
             <Hero />
             <About />
+            <Infrastructure />
         </div>
     )
 }

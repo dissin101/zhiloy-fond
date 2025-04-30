@@ -1,5 +1,6 @@
 import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Image from 'next/image'
+import SecondaryCard from '@/app/components/ui/SecondaryCard'
 
 const content = {
     title: '<b>Verona</b> — ваш личный остров тишины возле парка.',
@@ -33,11 +34,7 @@ const content = {
 }
 
 const About = () => (
-    <div
-        className={
-            'flex flex-col gap-5 bg-secondary rounded-[30px] px-4 lg:px-10 py-10'
-        }
-    >
+    <SecondaryCard>
         <div className={'grid lg:grid-cols-2 gap-5'}>
             <div className={'flex flex-col gap-2.5'}>
                 <p
@@ -67,6 +64,7 @@ const About = () => (
                             src={`/about-card-${index + 1}.png`}
                             alt={alt}
                             fill
+                            className={'object-cover rounded-[30px]'}
                         />
                     </div>
                     <PrimaryCard className={'w-full h-full'}>
@@ -75,7 +73,7 @@ const About = () => (
                 </div>
             ))}
         </div>
-    </div>
+    </SecondaryCard>
 )
 
 export default About
