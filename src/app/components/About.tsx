@@ -1,6 +1,7 @@
 import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Image from 'next/image'
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
+import Carousel from '@/app/components/ui/Carousel'
 
 const content = {
     title: '<b>Verona</b> — ваш личный остров тишины возле парка.',
@@ -31,30 +32,105 @@ const content = {
             alt: '',
         },
     ],
+    carousel: [
+        {
+            src: '/about-carousel-1.png',
+            alt: 'About Carousel 1',
+        },
+        {
+            src: '/about-carousel-2.png',
+            alt: 'About Carousel 2',
+        },
+        {
+            src: '/about-carousel-3.png',
+            alt: 'About Carousel 3',
+        },
+        {
+            src: '/about-carousel-4.png',
+            alt: 'About Carousel 4',
+        },
+        {
+            src: '/about-carousel-5.png',
+            alt: 'About Carousel 5',
+        },
+        {
+            src: '/about-carousel-6.png',
+            alt: 'About Carousel 6',
+        },
+        {
+            src: '/about-carousel-7.png',
+            alt: 'About Carousel 7',
+        },
+        {
+            src: '/about-carousel-8.png',
+            alt: 'About Carousel 8',
+        },
+        {
+            src: '/about-carousel-9.png',
+            alt: 'About Carousel 9',
+        },
+        {
+            src: '/about-carousel-10.png',
+            alt: 'About Carousel 10',
+        },
+        {
+            src: '/about-carousel-11.png',
+            alt: 'About Carousel 11',
+        },
+    ],
 }
 
 const About = () => (
-    <SecondaryCard>
-        <div className={'grid lg:grid-cols-2 gap-5'}>
-            <div className={'flex flex-col gap-2.5'}>
-                <p
-                    style={{ fontWeight: 500 }}
+    <SecondaryCard className={'gap-5'}>
+        <div className={'grid grid-cols-1 lg:grid-cols-2 gap-5'}>
+            <div className={'col-span-2 lg:col-span-1'}>
+                <div className={'flex flex-col gap-2.5'}>
+                    <p
+                        style={{ fontWeight: 500 }}
+                        className={
+                            'text-on-background text-[32px]/10 font-[var(--font-cormorant-sc)]'
+                        }
+                    >
+                        О комплексе
+                    </p>
+                    <PrimaryCard>
+                        <h2
+                            dangerouslySetInnerHTML={{ __html: content.title }}
+                        />
+                    </PrimaryCard>
+                    <p
+                        className={'text-on-secondary'}
+                        dangerouslySetInnerHTML={{
+                            __html: content.description,
+                        }}
+                    />
+                </div>
+            </div>
+            <div className={'col-span-2 lg:col-span-1 grid grid-cols-1'}>
+                <div
                     className={
-                        'text-on-background text-[32px]/10 font-[var(--font-cormorant-sc)]'
+                        'col-start-1 col-end-2 justify-self-center w-full my-auto'
                     }
                 >
-                    О комплексе
-                </p>
-                <PrimaryCard>
-                    <h2 dangerouslySetInnerHTML={{ __html: content.title }} />
-                </PrimaryCard>
-                <p
-                    className={'text-on-secondary'}
-                    dangerouslySetInnerHTML={{ __html: content.description }}
-                />
+                    <Carousel>
+                        {content.carousel.map(({ src, alt }, index) => (
+                            <div
+                                key={index}
+                                className={
+                                    'relative aspect-1/1 lg:aspect-[3/1.5]'
+                                }
+                            >
+                                <Image
+                                    className={'rounded-[30px] object-cover'}
+                                    src={src}
+                                    alt={alt}
+                                    fill
+                                />
+                            </div>
+                        ))}
+                    </Carousel>
+                </div>
             </div>
-            {/*TODO: add carousel*/}
-            <div>Carousel</div>
         </div>
         <div className={'grid lg:grid-cols-3 gap-5'}>
             {content.cards.map(({ text, alt }, index) => (
