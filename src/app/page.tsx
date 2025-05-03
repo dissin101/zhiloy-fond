@@ -5,6 +5,7 @@ import Infrastructure from '@/app/components/Infrastructure'
 import Hall from './components/Hall'
 import Additional from '@/app/components/Additional'
 import Advantages from '@/app/components/Advantages'
+import Environment from '@/app/components/Environment'
 
 const Index = () => {
     return (
@@ -20,6 +21,7 @@ const Index = () => {
             <Hall />
             <Additional />
             <Advantages />
+            <Environment />
         </div>
     )
 }
