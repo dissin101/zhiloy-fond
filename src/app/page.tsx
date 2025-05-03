@@ -3,6 +3,7 @@ import Hero from '@/app/components/Hero'
 import About from '@/app/components/About'
 import Infrastructure from '@/app/components/Infrastructure'
 import Hall from './components/Hall'
+import Additional from '@/app/components/Additional'
 
 const Index = () => {
     return (
@@ -16,6 +17,7 @@ const Index = () => {
             <About />
             <Infrastructure />
             <Hall />
+            <Additional />
         </div>
     )
 }
