@@ -20,8 +20,8 @@ const Hero = () => (
         <Image
             src={'/hero.png'}
             alt={'Hero image'}
-            width={2240}
-            height={898}
+            width={1320}
+            height={499}
             className={
                 'rounded-[30px] object-cover aspect-3/3 lg:aspect-3/1 w-full'
             }

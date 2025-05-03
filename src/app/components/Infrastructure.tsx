@@ -48,8 +48,8 @@ const Infrastructure = () => (
                     className={'col-span-2'}
                     src={content.image}
                     alt="Infrastructure"
-                    width={1670}
-                    height={1050}
+                    width={832}
+                    height={446}
                 />
                 <ol className={'col-span-1 flex flex-col gap-[30px]'}>
                     {content.items.map(
