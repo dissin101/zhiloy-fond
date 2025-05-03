@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface PrimaryCardProps {
-    children: React.ReactNode
+    children: React.ReactNode | React.ReactNode[] | string
     className?: string
 }
 

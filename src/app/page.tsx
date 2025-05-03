@@ -2,6 +2,7 @@ import Header from '@/app/components/Header'
 import Hero from '@/app/components/Hero'
 import About from '@/app/components/About'
 import Infrastructure from '@/app/components/Infrastructure'
+import Hall from './components/Hall'
 
 const Index = () => {
     return (
@@ -14,6 +15,7 @@ const Index = () => {
             <Hero />
             <About />
             <Infrastructure />
+            <Hall />
         </div>
     )
 }
