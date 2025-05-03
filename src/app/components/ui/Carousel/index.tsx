@@ -20,6 +20,7 @@ const Carousel = ({ children, className = '' }: CarouselProps) => {
 
     const settings = {
         swipeToSlide: true,
+        autoplay: true,
         dots: true,
         infinite: true,
         speed: 500,
