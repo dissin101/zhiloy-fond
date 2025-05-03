@@ -17,7 +17,7 @@ const Arrow = ({ type, onClick }: ArrowProps) => (
             justify-center items-center rounded-[30px] 
             w-[40px] h-[40px] absolute -bottom-[65px]
             lg:bottom-0 lg:top-1/2 
-            ${type === ArrowType.left ? 'ml-[40%] lg:ml-5 left-0' : 'mr-[40%] lg:mr-5 right-0'}`}
+            ${type === ArrowType.left ? 'left-1/2 -ml-15 lg:ml-5 lg:left-0' : 'right-1/2 -mr-15 lg:mr-5 lg:right-0'}`}
         onClick={onClick}
     >
         <ChevronLeft className={type === ArrowType.right ? 'rotate-180' : ''} />
