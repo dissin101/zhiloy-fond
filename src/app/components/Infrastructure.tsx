@@ -4,6 +4,7 @@ import Star from '@/app/components/icons/Star'
 import Education from '@/app/components/icons/Education'
 import Mall from '@/app/components/icons/Mall'
 import Health from '@/app/components/icons/Health'
+import SectionTitle from '@/app/components/ui/SectionTitle'
 
 const content = {
     image: {
@@ -37,14 +38,7 @@ const content = {
 
 const Infrastructure = () => (
     <SecondaryCard>
-        <p
-            style={{ fontWeight: 500 }}
-            className={
-                'text-on-background text-[32px]/10 font-[var(--font-cormorant-sc)]'
-            }
-        >
-            Инфраструктура
-        </p>
+        <SectionTitle>Инфраструктура</SectionTitle>
         <div className={'flex flex-col lg:grid lg:grid-cols-3 gap-5'}>
             <div className={'col-span-2 relative block lg:hidden aspect-3/4'}>
                 <Image

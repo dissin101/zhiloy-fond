@@ -2,6 +2,7 @@ import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Image from 'next/image'
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import Carousel from '@/app/components/ui/Carousel'
+import SectionTitle from '@/app/components/ui/SectionTitle'
 
 const content = {
     title: '<b>Verona</b> — ваш личный остров тишины возле парка.',
@@ -85,14 +86,7 @@ const About = () => (
         <div className={'grid grid-cols-1 lg:grid-cols-2 gap-5'}>
             <div className={'col-span-2 lg:col-span-1'}>
                 <div className={'flex flex-col gap-2.5'}>
-                    <p
-                        style={{ fontWeight: 500 }}
-                        className={
-                            'text-on-background text-[32px]/10 font-[var(--font-cormorant-sc)]'
-                        }
-                    >
-                        О комплексе
-                    </p>
+                    <SectionTitle>О комплексе</SectionTitle>
                     <PrimaryCard>
                         <h2
                             dangerouslySetInnerHTML={{ __html: content.title }}

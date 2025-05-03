@@ -2,6 +2,7 @@ import SecondaryCard from './ui/SecondaryCard'
 import Image from 'next/image'
 import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Carousel from '@/app/components/ui/Carousel'
+import SectionTitle from '@/app/components/ui/SectionTitle'
 
 const content = {
     image: {
@@ -33,14 +34,7 @@ const content = {
 }
 const Hall = () => (
     <SecondaryCard>
-        <p
-            style={{ fontWeight: 500 }}
-            className={
-                'text-on-background text-[32px]/10 font-[var(--font-cormorant-sc)]'
-            }
-        >
-            Холлы
-        </p>
+        <SectionTitle>Холлы</SectionTitle>
         <div className={'relative block lg:hidden aspect-3/4'}>
             <Image
                 className={'object-cover rounded-[30px]'}
