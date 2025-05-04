@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     mages: {
         unoptimized: true,
     },
+    images: {
+        path: '/zhiloy-fond',
+    },
 }
 
 export default nextConfig
