@@ -8,6 +8,7 @@ import Advantages from '@/app/components/Advantages'
 import Environment from '@/app/components/Environment'
 import Address from '@/app/components/Address'
 import Feedback from '@/app/components/Feedback'
+import Footer from '@/app/components/Footer'
 
 const Index = () => {
     return (
@@ -26,6 +27,7 @@ const Index = () => {
             <Environment />
             <Address />
             <Feedback />
+            <Footer />
         </div>
     )
 }
