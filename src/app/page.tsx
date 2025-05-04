@@ -7,6 +7,7 @@ import Additional from '@/app/components/Additional'
 import Advantages from '@/app/components/Advantages'
 import Environment from '@/app/components/Environment'
 import Address from '@/app/components/Address'
+import Feedback from '@/app/components/Feedback'
 
 const Index = () => {
     return (
@@ -24,6 +25,7 @@ const Index = () => {
             <Advantages />
             <Environment />
             <Address />
+            <Feedback />
         </div>
     )
 }
