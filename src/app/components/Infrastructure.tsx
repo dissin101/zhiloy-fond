@@ -5,6 +5,7 @@ import Education from '@/app/components/icons/Education'
 import Mall from '@/app/components/icons/Mall'
 import Health from '@/app/components/icons/Health'
 import SectionTitle from '@/app/components/ui/SectionTitle'
+import { getImagePath } from '@/app/utils/image'
 
 const content = {
     image: {
@@ -43,7 +44,7 @@ const Infrastructure = () => (
             <div className={'col-span-2 relative block lg:hidden aspect-3/4'}>
                 <Image
                     className={'object-cover rounded-[30px]'}
-                    src={content.image.srcMobile}
+                    src={getImagePath(content.image.srcMobile)}
                     alt={content.image.alt}
                     fill
                 />
@@ -55,7 +56,7 @@ const Infrastructure = () => (
             >
                 <Image
                     className={'object-cover rounded-[30px]'}
-                    src={content.image.src}
+                    src={getImagePath(content.image.src)}
                     alt={content.image.alt}
                     fill
                 />

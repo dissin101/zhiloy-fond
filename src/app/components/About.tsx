@@ -3,6 +3,7 @@ import Image from 'next/image'
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import Carousel from '@/app/components/ui/Carousel'
 import SectionTitle from '@/app/components/ui/SectionTitle'
+import { getImagePath } from '@/app/utils/image'
 
 const content = {
     title: '<b>Verona</b> — ваш личный остров тишины возле парка.',
@@ -116,7 +117,7 @@ const About = () => (
                             >
                                 <Image
                                     className={'rounded-[30px] object-cover'}
-                                    src={src}
+                                    src={getImagePath(src)}
                                     alt={alt}
                                     fill
                                 />
@@ -131,7 +132,7 @@ const About = () => (
                 <div key={index} className={'flex flex-col gap-2.5'}>
                     <div className={'w-full relative aspect-2/1 lg:aspect-2/1'}>
                         <Image
-                            src={`/about-card-${index + 1}.png`}
+                            src={getImagePath(`/about-card-${index + 1}.png`)}
                             alt={alt}
                             fill
                             className={'object-cover rounded-[30px]'}

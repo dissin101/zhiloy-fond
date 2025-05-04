@@ -1,5 +1,6 @@
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
+import { getImagePath } from '@/app/utils/image'
 
 const Header = () => {
     return (
@@ -12,7 +13,7 @@ const Header = () => {
                 <div className={'hidden lg:block'} />
                 <Image
                     className={'self-center lg:absolute lg:left-[40%]'}
-                    src={'/logo.svg'}
+                    src={getImagePath('/logo.svg')}
                     alt={'Verona logo'}
                     width={184}
                     height={47}

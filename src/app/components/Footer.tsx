@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
+import { getImagePath } from '@/app/utils/image'
 
 const Footer = () => (
     <div>
@@ -12,7 +13,7 @@ const Footer = () => (
             <div className={'hidden md:block'} />
             <Image
                 className={'lg:absolute lg:left-[40%]'}
-                src={'/logo.svg'}
+                src={getImagePath('/logo.svg')}
                 alt={'Verona logo'}
                 width={184}
                 height={47}
@@ -26,7 +27,7 @@ const Footer = () => (
                     <PrimaryButton>+7 707 799 7979</PrimaryButton>
                 </a>
                 <Image
-                    src={'/zhiloy-fond-logo.png'}
+                    src={getImagePath('/zhiloy-fond-logo.png')}
                     alt={'Zhiloy Fond'}
                     width={126}
                     height={105}

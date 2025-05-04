@@ -3,6 +3,7 @@ import Image from 'next/image'
 import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Carousel from '@/app/components/ui/Carousel'
 import SectionTitle from '@/app/components/ui/SectionTitle'
+import { getImagePath } from '@/app/utils/image'
 
 const content = {
     image: {
@@ -38,7 +39,7 @@ const Hall = () => (
         <div className={'relative block lg:hidden aspect-3/4'}>
             <Image
                 className={'object-cover rounded-[30px]'}
-                src={content.image.srcMobile}
+                src={getImagePath(content.image.srcMobile)}
                 alt={content.image.alt}
                 fill
             />
@@ -46,7 +47,7 @@ const Hall = () => (
         <div className={'relative hidden lg:block aspect-2/1'}>
             <Image
                 className={'object-cover rounded-[30px]'}
-                src={content.image.src}
+                src={getImagePath(content.image.src)}
                 alt={content.image.alt}
                 fill
             />
@@ -62,7 +63,7 @@ const Hall = () => (
                     >
                         <Image
                             className={'rounded-[30px] object-cover'}
-                            src={src}
+                            src={getImagePath(src)}
                             alt={alt}
                             fill
                         />

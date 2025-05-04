@@ -1,6 +1,7 @@
 import Tag from '@/app/components/ui/Tag'
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
+import { getImagePath } from '@/app/utils/image'
 
 const content = {
     title: 'VERONA',
@@ -18,7 +19,7 @@ const content = {
 const Hero = () => (
     <div className={'flex flex-col gap-[5px] mt-2.5'}>
         <Image
-            src={'/hero.png'}
+            src={getImagePath('/hero.png')}
             alt={'Hero image'}
             width={1320}
             height={499}

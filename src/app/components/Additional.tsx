@@ -1,6 +1,7 @@
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Image from 'next/image'
+import { getImagePath } from '@/app/utils/image'
 
 const content = {
     title: `
@@ -80,7 +81,7 @@ const Additional = () => (
                         className={'col-span-4 aspect-[2/1.5] relative'}
                         key={index}
                     >
-                        <Image src={src} alt={alt} fill />
+                        <Image src={getImagePath(src)} alt={alt} fill />
                     </div>
                 ))}
             </div>
@@ -89,7 +90,7 @@ const Additional = () => (
                     <div className={'aspect-[2/1.2] relative'} key={index}>
                         <Image
                             className={'object-cover'}
-                            src={srcMobile}
+                            src={getImagePath(srcMobile)}
                             alt={alt}
                             fill
                         />

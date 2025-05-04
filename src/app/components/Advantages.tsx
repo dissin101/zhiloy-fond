@@ -10,6 +10,7 @@ import Snow from '@/app/components/icons/Snow'
 import SectionTitle from '@/app/components/ui/SectionTitle'
 import Image from 'next/image'
 import Carousel from '@/app/components/ui/Carousel'
+import { getImagePath } from '@/app/utils/image'
 
 const content = {
     carousel: [
@@ -78,7 +79,7 @@ const Advantages = () => (
                             >
                                 <Image
                                     className={'rounded-[30px] object-cover'}
-                                    src={src}
+                                    src={getImagePath(src)}
                                     alt={alt}
                                     fill
                                 />
