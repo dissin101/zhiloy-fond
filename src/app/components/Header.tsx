@@ -1,6 +1,7 @@
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
 import { getImagePath } from '@/app/utils/image'
+import Phone from '@/app/components/icons/Phone'
 
 const Header = () => {
     return (
@@ -22,7 +23,9 @@ const Header = () => {
                     className={'self-end hidden lg:block'}
                     href={'tel:+77077997979'}
                 >
-                    <PrimaryButton>+7 707 799 7979</PrimaryButton>
+                    <PrimaryButton className={'flex gap-2.5'}>
+                        <Phone /> +7 707 799 7979
+                    </PrimaryButton>
                 </a>
             </header>
             <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#BC9D65] to-transparent mt-[10px] lg:mt-0"></div>

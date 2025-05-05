@@ -2,6 +2,7 @@ import Tag from '@/app/components/ui/Tag'
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
 import { getImagePath } from '@/app/utils/image'
+import Download from '@/app/components/icons/Download'
 
 const content = {
     title: 'VERONA',
@@ -52,9 +53,14 @@ const Hero = () => (
                     ))}
                 </div>
                 <div className={'flex flex-col lg:flex-row gap-2.5'}>
-                    {/* TODO: add icons & actions*/}
-                    <PrimaryButton>Скачать буклет</PrimaryButton>
-                    <PrimaryButton>Скачать планировку</PrimaryButton>
+                    <PrimaryButton className={'flex gap-2.5'}>
+                        <Download />
+                        Скачать буклет
+                    </PrimaryButton>
+                    <PrimaryButton className={'flex gap-2.5'}>
+                        <Download />
+                        Скачать планировку
+                    </PrimaryButton>
                 </div>
             </div>
         </div>

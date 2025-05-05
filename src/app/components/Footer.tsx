@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import { getImagePath } from '@/app/utils/image'
+import Phone from '@/app/components/icons/Phone'
 
 const Footer = () => (
     <div>
@@ -24,7 +25,9 @@ const Footer = () => (
                 }
             >
                 <a href={'tel:+77077997979'}>
-                    <PrimaryButton>+7 707 799 7979</PrimaryButton>
+                    <PrimaryButton className={'flex gap-2.5'}>
+                        <Phone /> +7 707 799 7979
+                    </PrimaryButton>
                 </a>
                 <Image
                     src={getImagePath('/zhiloy-fond-logo.png')}
