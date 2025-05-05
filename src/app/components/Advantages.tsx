@@ -94,12 +94,16 @@ const Advantages = () => (
                     {content.items.map(({ title, icon }, index) => (
                         <div
                             className={
-                                ' border-[1px] border-primary bg-[#454545] py-2.5 px-2.5 lg:px-5 rounded-[30px] flex flex-col text-center items-center gap-[5px] text-on-background'
+                                'border-[1px] border-primary bg-[#454545] py-2.5 px-2.5 lg:px-5 rounded-[30px] flex flex-col text-center items-center gap-[5px] text-on-background transform transition duration-500 hover:scale-110 hover:shadow-lg hover:bg-[#505050] hover:border-[#D0A760] cursor-pointer'
                             }
                             key={index}
                         >
-                            {icon}
-                            <p>{title}</p>
+                            <div className="transition-transform duration-300 hover:scale-125">
+                                {icon}
+                            </div>
+                            <p className="transition-all duration-300 hover:font-semibold">
+                                {title}
+                            </p>
                         </div>
                     ))}
                 </div>
