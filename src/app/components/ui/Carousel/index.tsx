@@ -33,7 +33,7 @@ const Carousel = ({ children, className = '' }: CarouselProps) => {
         ),
         dotsClass:
             '!flex flex-row justify-center items-center gap-2.5 mt-[25px] mb-[65px] lg:mt-2 lg:mb-2',
-        className,
+        className: `${className} rounded-[30px] overflow-hidden`,
     }
 
     return (
