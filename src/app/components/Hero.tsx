@@ -3,6 +3,7 @@ import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
 import { getImagePath } from '@/app/utils/image'
 import Download from '@/app/components/icons/Download'
+import Location from '@/app/components/icons/Location'
 
 const content = {
     title: 'VERONA',
@@ -43,10 +44,12 @@ const Hero = () => (
                 <p>{content.comissionated}</p>
             </div>
             <div className={'flex flex-col lg:items-end gap-5'}>
-                {/* TODO: add location icon*/}
-                <p className={'text-on-background mt-2.5 lg:mt-0'}>
-                    {content.location}
-                </p>
+                <div className={'flex items-center gap-1'}>
+                    <Location />
+                    <p className={'text-on-background mt-2.5 lg:mt-0'}>
+                        {content.location}
+                    </p>
+                </div>
                 <div className={'hidden lg:flex flex-wrap gap-2.5 justify-end'}>
                     {content.tags.map((tag, index) => (
                         <Tag value={tag} key={index} />

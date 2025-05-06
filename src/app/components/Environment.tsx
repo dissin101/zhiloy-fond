@@ -54,7 +54,6 @@ const Environment = () => (
                                 'flex gap-2.5  lg:gap-[22px] flex-col lg:flex-row justify-center items-center'
                             }
                         >
-                            {/*TODO: add Roboto font*/}
                             <span
                                 className={
                                     ' text-primary text-[80px] leading-none'
