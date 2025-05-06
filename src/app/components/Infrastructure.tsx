@@ -61,31 +61,29 @@ const Infrastructure = () => (
                     fill
                 />
             </div>
-            <ol className={'col-span-1 flex flex-col gap-[30px]'}>
+            <ol className="col-span-1 relative">
+                {content.items.length > 1 && (
+                    <div
+                        className="absolute left-[18px] w-[1px] h-[calc(100%-50px)] lg:h-[calc(100%-62px)] border-l border-dashed border-on-secondary"
+                        aria-hidden="true"
+                    />
+                )}
+
                 {content.items.map(({ title, description, icon }, index) => (
-                    <li key={index}>
-                        <div className={'flex gap-2.5'}>
-                            <div
-                                className={
-                                    'flex justify-center items-center rounded-3xl bg-[#8F7546] w-[36px] h-[36px] shrink-0'
-                                }
-                            >
-                                {icon}
-                            </div>
-                            <div
-                                className={
-                                    'text-on-secondary flex flex-col gap-[5px]'
-                                }
-                            >
-                                <p
-                                    className={
-                                        'uppercase font-bold text-[16px]'
-                                    }
-                                >
-                                    {title}
-                                </p>
-                                <p className={'text-[16px]'}>{description}</p>
-                            </div>
+                    <li
+                        key={index}
+                        className={`flex gap-2.5 ${
+                            index < content.items.length - 1 ? 'mb-[30px]' : ''
+                        }`}
+                    >
+                        <div className="flex justify-center items-center rounded-3xl bg-[#8F7546] w-[36px] h-[36px] shrink-0 relative z-10">
+                            {icon}
+                        </div>
+                        <div className="text-on-secondary flex flex-col gap-[5px]">
+                            <p className="uppercase font-bold text-[16px]">
+                                {title}
+                            </p>
+                            <p className="text-[16px]">{description}</p>
                         </div>
                     </li>
                 ))}
