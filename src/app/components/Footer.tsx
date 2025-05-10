@@ -2,6 +2,8 @@ import Image from 'next/image'
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import { getImagePath } from '@/app/utils/image'
 import Phone from '@/app/components/icons/Phone'
+import Instagram from '@/app/components/icons/Instagram'
+import Whatsapp from '@/app/components/icons/WhatsApp'
 
 const Footer = () => (
     <div>
@@ -24,6 +26,24 @@ const Footer = () => (
                     'flex flex-col lg:flex-row gap-5 lg:gap-[50px] items-center lg:self-end mt-5 lg:mt-0'
                 }
             >
+                <div className={'flex gap-5'}>
+                    <a
+                        target={'_blank'}
+                        href={
+                            'https://api.whatsapp.com/send/?phone=%2B77077997979&text&type=phone_number&app_absent=0'
+                        }
+                    >
+                        <Whatsapp />
+                    </a>
+                    <a
+                        target={'_blank'}
+                        href={
+                            'https://www.instagram.com/zhiloyfond_krg?igsh=MTJ2YnhwOW1jMWYzcw=='
+                        }
+                    >
+                        <Instagram />
+                    </a>
+                </div>
                 <a href={'tel:+77077997979'}>
                     <PrimaryButton className={'flex gap-2.5'}>
                         <Phone /> +7 707 799 7979
