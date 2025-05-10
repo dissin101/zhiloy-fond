@@ -1,8 +1,6 @@
 import Tag from '@/app/components/ui/Tag'
-import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
 import { getImagePath } from '@/app/utils/image'
-import Download from '@/app/components/icons/Download'
 import Location from '@/app/components/icons/Location'
 import BookletButton from '@/app/components/Hero/BookletButton'
 import LayoutButton from '@/app/components/Hero/LayoutButton'
