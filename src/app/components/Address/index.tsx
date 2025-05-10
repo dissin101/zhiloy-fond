@@ -25,7 +25,7 @@ const content = {
 
 const Address = () => {
     return (
-        <div className={'grid grid-cols-12 gap-5'}>
+        <section className={'grid grid-cols-12 gap-5'}>
             <div className={'col-span-12 lg:col-span-5'}>
                 <SecondaryCard className={'lg:!gap-2.5 h-full'}>
                     <SectionTitle>Адрес клубного дома</SectionTitle>
@@ -48,7 +48,7 @@ const Address = () => {
             >
                 <Map coordinates={content.coordinates} />
             </div>
-        </div>
+        </section>
     )
 }
 

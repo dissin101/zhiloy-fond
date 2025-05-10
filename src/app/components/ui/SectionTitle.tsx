@@ -6,12 +6,12 @@ interface SectionTitleProps {
 }
 
 const SectionTitle = ({ children, className = '' }: SectionTitleProps) => (
-    <p
+    <h2
         style={{ fontWeight: 500 }}
         className={`${className} text-on-background text-[32px]/10 font-[var(--font-cormorant-sc)]`}
     >
         {children}
-    </p>
+    </h2>
 )
 
 export default SectionTitle

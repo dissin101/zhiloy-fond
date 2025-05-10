@@ -10,7 +10,7 @@ const Footer = () => (
         <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#BC9D65] to-transparent"></div>
         <footer
             className={
-                'relative flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full py-[39px]'
+                'relative flex flex-col lg:flex-row justify-center lg:justify-between items-center w-full pt-[39px]'
             }
         >
             <div className={'hidden md:block'} />

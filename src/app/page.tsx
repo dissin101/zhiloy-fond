@@ -12,23 +12,21 @@ import Footer from '@/app/components/Footer'
 
 const Index = () => {
     return (
-        <div
-            className={
-                'flex flex-col m-auto gap-5 lg:gap-[30px] px-4 md:px-[60px] max-w-[1320px]'
-            }
-        >
+        <>
             <Header />
-            <Hero />
-            <About />
-            <Infrastructure />
-            <Hall />
-            <Additional />
-            <Advantages />
-            <Environment />
-            <Address />
-            <Feedback />
+            <main className={'flex flex-col gap-5 lg:gap-[30px]'}>
+                <Hero />
+                <About />
+                <Infrastructure />
+                <Hall />
+                <Additional />
+                <Advantages />
+                <Environment />
+                <Address />
+                <Feedback />
+            </main>
             <Footer />
-        </div>
+        </>
     )
 }
 

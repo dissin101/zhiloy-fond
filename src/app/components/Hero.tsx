@@ -19,17 +19,21 @@ const content = {
 }
 
 const Hero = () => (
-    <div className={'flex flex-col gap-[5px] mt-2.5'}>
-        <Image
-            src={getImagePath('/hero.png')}
-            alt={'Hero image'}
-            width={1320}
-            height={499}
-            className={
-                'rounded-[30px] object-cover aspect-3/3 lg:aspect-3/1 w-full'
-            }
-        />
-        <div className={'flex flex-col lg:flex-row justify-between gap-2.5'}>
+    <section className={'flex flex-col gap-[5px] mt-2.5'}>
+        <figure>
+            <Image
+                src={getImagePath('/hero.png')}
+                alt={'Hero image'}
+                width={1320}
+                height={499}
+                className={
+                    'rounded-[30px] object-cover aspect-3/3 lg:aspect-3/1 w-full'
+                }
+            />
+        </figure>
+        <article
+            className={'flex flex-col lg:flex-row justify-between gap-2.5'}
+        >
             <div className={'flex flex-col gap-2.5 text-on-background'}>
                 <span className={'font-bold'}>Проект</span>
                 <h1
@@ -41,15 +45,15 @@ const Hero = () => (
                     {content.title}
                 </h1>
                 <p className={'font-bold'}>{content.description}</p>
-                <p>{content.comissionated}</p>
+                <time dateTime="2025-03-31">{content.comissionated}</time>
             </div>
             <div className={'flex flex-col lg:items-end gap-5'}>
-                <div className={'flex items-center gap-1'}>
+                <address className={'flex items-center gap-1'}>
                     <Location />
                     <p className={'text-on-background mt-2.5 lg:mt-0'}>
                         {content.location}
                     </p>
-                </div>
+                </address>
                 <div className={'hidden lg:flex flex-wrap gap-2.5 justify-end'}>
                     {content.tags.map((tag, index) => (
                         <Tag value={tag} key={index} />
@@ -66,9 +70,9 @@ const Hero = () => (
                     </PrimaryButton>
                 </div>
             </div>
-        </div>
+        </article>
         <div className={'hidden lg:flex bg-primary w-full h-[1px]'} />
-    </div>
+    </section>
 )
 
 export default Hero

@@ -13,7 +13,7 @@ const content = {
 
 const Index = () => {
     return (
-        <div className={'grid grid-cols-12 gap-5'}>
+        <section className={'grid grid-cols-12 gap-5'}>
             <div className={'col-span-12 lg:col-span-8'}>
                 <div
                     className={
@@ -43,7 +43,7 @@ const Index = () => {
                     <Form src={content.scriptSrc} data={content.scriptData} />
                 </SecondaryCard>
             </div>
-        </div>
+        </section>
     )
 }
 
