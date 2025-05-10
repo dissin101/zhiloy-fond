@@ -46,6 +46,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
+                id={'App'}
                 className={`
             flex flex-col m-auto gap-5 lg:gap-[30px] px-4 md:px-[60px] max-w-[1320px]
             ${lora.variable} ${cormorant.variable} antialiased`}
