@@ -1,7 +1,9 @@
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
 import Image from 'next/image'
-import { getImagePath } from '@/app/utils/image'
 import Phone from '@/app/components/icons/Phone'
+import { getContent } from '@/app/utils/content'
+
+const { header: content } = getContent()
 
 const Header = () => {
     return (
@@ -14,17 +16,17 @@ const Header = () => {
                 <div className={'hidden lg:block'} />
                 <Image
                     className={'self-center lg:absolute lg:left-[40%]'}
-                    src={getImagePath('/logo.svg')}
-                    alt={'Verona logo'}
-                    width={184}
-                    height={47}
+                    src={content.logo.src}
+                    alt={content.logo.alt}
+                    width={content.logo.width}
+                    height={content.logo.height}
                 />
                 <a
                     className={'self-end hidden lg:block'}
-                    href={'tel:+77077997979'}
+                    href={`tel:${content.phone.trim()}`}
                 >
                     <PrimaryButton className={'flex gap-2.5'}>
-                        <Phone /> +7 707 799 7979
+                        <Phone /> {content.phone}
                     </PrimaryButton>
                 </a>
             </header>

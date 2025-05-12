@@ -1,31 +1,20 @@
 import Tag from '@/app/components/ui/Tag'
 import Image from 'next/image'
-import { getImagePath } from '@/app/utils/image'
 import Location from '@/app/components/icons/Location'
 import BookletButton from '@/app/components/Hero/BookletButton'
 import LayoutButton from '@/app/components/Hero/LayoutButton'
+import { getContent } from '@/app/utils/content'
 
-const content = {
-    title: 'VERONA',
-    description: 'Гармония городской жизни на вершине комфорта',
-    comissionated: 'Сдан в эксплуатацию  в 1 кв 2025 г',
-    location: 'Казахстан, Караганда, ул. Касыма Аманжолова, 100',
-    tags: [
-        'Авторская архитектура',
-        'Ландшафтный дизайн двора',
-        'Зимняя детская игровая комната',
-        'Подземный паркинг',
-    ],
-}
+const { hero: content } = getContent()
 
 const Index = () => (
     <section className={'flex flex-col gap-[5px] mt-2.5'}>
         <figure>
             <Image
-                src={getImagePath('/hero.png')}
-                alt={'Hero image'}
-                width={1320}
-                height={499}
+                src={content.image.src}
+                alt={content.image.alt}
+                width={content.image.width}
+                height={content.image.height}
                 className={
                     'rounded-[30px] object-cover aspect-3/3 lg:aspect-3/1 w-full'
                 }

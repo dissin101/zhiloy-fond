@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import PrimaryButton from '@/app/components/ui/PrimaryButton'
-import { getImagePath } from '@/app/utils/image'
 import Phone from '@/app/components/icons/Phone'
 import Instagram from '@/app/components/icons/Instagram'
 import Whatsapp from '@/app/components/icons/WhatsApp'
+import { getContent } from '@/app/utils/content'
+
+const { footer: content } = getContent()
 
 const Footer = () => (
     <div>
@@ -16,10 +18,10 @@ const Footer = () => (
             <div className={'hidden md:block'} />
             <Image
                 className={'lg:absolute lg:left-[40%]'}
-                src={getImagePath('/logo.svg')}
-                alt={'Verona logo'}
-                width={184}
-                height={47}
+                src={content.logo.src}
+                alt={content.logo.alt}
+                width={content.logo.width}
+                height={content.logo.height}
             />
             <div
                 className={
@@ -44,16 +46,16 @@ const Footer = () => (
                         <Instagram />
                     </a>
                 </div>
-                <a href={'tel:+77077997979'}>
+                <a href={`tel:${content.phone.trim()}`}>
                     <PrimaryButton className={'flex gap-2.5'}>
-                        <Phone /> +7 707 799 7979
+                        <Phone /> {content.phone}
                     </PrimaryButton>
                 </a>
                 <Image
-                    src={getImagePath('/zhiloy-fond-logo.png')}
-                    alt={'Zhiloy Fond'}
-                    width={126}
-                    height={105}
+                    src={content.zhiloyFondLogo.src}
+                    alt={content.zhiloyFondLogo.alt}
+                    width={content.zhiloyFondLogo.width}
+                    height={content.zhiloyFondLogo.height}
                 />
             </div>
         </footer>

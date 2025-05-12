@@ -1,63 +1,9 @@
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import PrimaryCard from '@/app/components/ui/PrimaryCard'
 import Image from 'next/image'
-import { getImagePath } from '@/app/utils/image'
+import { getContent } from '@/app/utils/content'
 
-const content = {
-    title: `
-        <span>
-            В Verona каждое утро начинается с тишины, наполненной смыслом.
-        </span>
-        </br>
-        <span>
-            Здесь время словно замедляется, чтобы 
-            вы могли проживать день неспешно, 
-            с удовольствием, в гармонии с собой 
-            и пространством.
-        </span>
-    `,
-    description: `
-        <span>
-            Философия уютной и размеренной жизни заложена в каждый элемент этого камерного комплекса.
-            Особое внимание уделено пространствам, где можно остановиться и насладиться моментом:
-            Уютные беседки, утопающие в зелени двора, приглашают на неторопливые разговоры с близкими, чашку утреннего кофе или вечернее спокойствие под мягким светом фонарей.
-        </span>
-        <br/>
-        <br/>
-        <span>
-            Для самых юных жителей создана современная детская площадка — безопасная, интерактивная 
-            и вдохновляющая на игру.
-            А продуманные зоны отдыха позволяют родителям расслабиться и наблюдать, как растёт их счастье.
-        </span>
-        <br/>
-        <br/>
-        <span>
-            Verona — это не просто жильё.
-        </span>
-        <br/>
-        <br/>
-        <span>
-            Это место, где возвращается вкус к жизни. Где каждый день — это ваш личный уютный ритуал.
-        </span>
-    `,
-    images: [
-        {
-            srcMobile: '/additional-mobile-1.png',
-            src: '/additional-1.png',
-            alt: 'Additional image 1',
-        },
-        {
-            srcMobile: '/additional-mobile-2.png',
-            src: '/additional-2.png',
-            alt: 'Additional image 2',
-        },
-        {
-            srcMobile: '/additional-mobile-3.png',
-            src: '/additional-3.png',
-            alt: 'Additional image 3',
-        },
-    ],
-}
+const { additional: content } = getContent()
 
 const Additional = () => (
     <section>
@@ -84,7 +30,7 @@ const Additional = () => (
                             className={'col-span-4 aspect-[2/1.5] relative'}
                             key={index}
                         >
-                            <Image src={getImagePath(src)} alt={alt} fill />
+                            <Image src={src} alt={alt} fill />
                         </div>
                     ))}
                 </div>
@@ -93,7 +39,7 @@ const Additional = () => (
                         <div className={'aspect-[2/1.2] relative'} key={index}>
                             <Image
                                 className={'object-cover'}
-                                src={getImagePath(srcMobile)}
+                                src={srcMobile}
                                 alt={alt}
                                 fill
                             />

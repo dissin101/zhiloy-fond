@@ -1,27 +1,9 @@
 import Map from '@/app/components/Address/Map'
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import SectionTitle from '@/app/components/ui/SectionTitle'
-import Phone from '@/app/components/icons/Phone'
-import Location from '@/app/components/icons/Location'
-import Clock from '@/app/components/icons/Clock'
+import { getContent } from '@/app/utils/content'
 
-const content = {
-    coordinates: [49.797976, 73.066012],
-    items: [
-        {
-            icon: <Phone />,
-            text: '+7 707 799 7979',
-        },
-        {
-            icon: <Location />,
-            text: 'Казахстан, Караганда, ул. Касыма Аманжолова, 100',
-        },
-        {
-            icon: <Clock />,
-            text: '10:00 – 19:00 (без выходных и без перерывов)',
-        },
-    ],
-}
+const { address: content } = getContent()
 
 const Address = () => {
     return (

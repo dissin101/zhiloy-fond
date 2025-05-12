@@ -1,42 +1,8 @@
 import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import SectionTitle from '@/app/components/ui/SectionTitle'
+import { getContent } from '@/app/utils/content'
 
-const content = {
-    items: [
-        {
-            time: '2 минуты',
-            description: 'Центральный Парк',
-        },
-        {
-            time: '4 минуты',
-            description: 'Детские сады & Центры',
-        },
-        {
-            time: '5 минут',
-            description: 'Гостиница / Fitness Центр Cosmonaut',
-        },
-        {
-            time: '6 минут',
-            description: 'Супер маркет Южный & Аян',
-        },
-        {
-            time: '7 минут',
-            description: 'Гостиница Чайка',
-        },
-        {
-            time: '8 минут',
-            description: 'Ресторан / Банкетный зал Villa Borghese',
-        },
-        {
-            time: '9 минут',
-            description: 'Зоопарк',
-        },
-        {
-            time: '10 минут',
-            description: 'ТРЦ Азия / ЦУМ & Сity Mall',
-        },
-    ],
-}
+const { environment: content } = getContent()
 
 const Environment = () => (
     <section>

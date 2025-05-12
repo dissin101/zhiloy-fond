@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:verona": "PROJECT_ENV=verona next dev --turbopack",
     "build": "next build",
+    "build:verona": "PROJECT_ENV=verona next build",
     "start": "next start",
     "lint": "next lint"
   },
