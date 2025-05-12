@@ -3,9 +3,9 @@ import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import SectionTitle from '@/app/components/ui/SectionTitle'
 import { getContent } from '@/app/utils/content'
 
-const { address: content } = getContent()
-
 const Address = () => {
+    const { address: content } = getContent()
+
     return (
         <section className={'grid grid-cols-12 gap-5'}>
             <div className={'col-span-12 lg:col-span-5'}>

@@ -3,9 +3,9 @@ import SecondaryCard from '@/app/components/ui/SecondaryCard'
 import Form from '@/app/components/Feedback/Form'
 import { getContent } from '@/app/utils/content'
 
-const { feedback: content } = getContent()
-
 const Index = () => {
+    const { feedback: content } = getContent()
+
     return (
         <section className={'grid grid-cols-12 gap-5'}>
             <div className={'col-span-12 lg:col-span-8'}>

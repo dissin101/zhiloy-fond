@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Phone from '@/app/components/icons/Phone'
 import { getContent } from '@/app/utils/content'
 
-const { header: content } = getContent()
-
 const Header = () => {
+    const { header: content } = getContent()
+
     return (
         <div>
             <header
