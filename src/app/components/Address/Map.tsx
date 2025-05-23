@@ -1,5 +1,5 @@
 'use client'
-import { YMaps, Map as YMap, Placemark } from '@pbe/react-yandex-maps'
+import { YMaps, Map as YMap, Placemark } from '@iminside/react-yandex-maps'
 
 interface MapProps {
     coordinates: number[]
